@@ -6,6 +6,7 @@ from flask_jwt_extended import JWTManager, jwt_required, create_access_token
 import os
 from dotenv import load_dotenv
 
+
 # ~~~ Config ~~~
 # ~~~ Config ~~~
 # ~~~ Config ~~~
@@ -16,6 +17,7 @@ app.config['JWT_SECRET_KEY'] = os.environ.get('JWT_SECRET_KEY')
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 jwt = JWTManager(app)
+
 
 @app.route('/')
 def index():
